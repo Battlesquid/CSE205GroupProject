@@ -1,0 +1,1 @@
+INSERT INTO users (username, password, enabled, firstName, lastName, email, address, accountType) VALUES('battle', crypt('password123', gen_salt('bf', 5)), true, 'mayowa', 'esan', 'oesan@asu.edu', 'why would I dox myself lmao', 'customer')

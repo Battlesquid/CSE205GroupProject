@@ -1,65 +1,31 @@
 package spring.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "saved_orders", schema = "store")
 public class Order {
 
     @Id
     @Column
-    @GeneratedValue
-    private Long orderNumber;
-
-    @Column
     private String username;
 
     @Column
-    private Long itemId;
+    private String items;
 
-    @Column
-    private int quantity;
-
-    public Long getOrderNumber()
-    {
-        return orderNumber;
-    }
-
-    public void setOrderNumber( Long orderNumber )
-    {
-        this.orderNumber = orderNumber;
-    }
-
-    public String getUsername()
-    {
+    public String getUsername() {
         return username;
     }
 
-    public void setUsername( String username )
-    {
+    public void setUsername(String username) {
         this.username = username;
     }
 
-    public Long getItemId()
-    {
-        return itemId;
+    public String getItems() {
+        return items;
     }
 
-    public void setItemId( Long itemId )
-    {
-        this.itemId = itemId;
-    }
-
-    public int getQuantity()
-    {
-        return quantity;
-    }
-
-    public void setQuantity( int quantity )
-    {
-        this.quantity = quantity;
+    public void setItems(String items) {
+        this.items = items;
     }
 }

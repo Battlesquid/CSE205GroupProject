@@ -23,41 +23,35 @@ public class ItemManager {
 
     private final ItemCategoryRepository itemCategoryRepository;
 
-    public ItemManager( ItemRepository itemRepository, CategoryRepository categoryRepository, ItemCategoryRepository itemCategoryRepository )
-    {
+    public ItemManager(ItemRepository itemRepository, CategoryRepository categoryRepository, ItemCategoryRepository itemCategoryRepository) {
         this.itemRepository = itemRepository;
         this.categoryRepository = categoryRepository;
         this.itemCategoryRepository = itemCategoryRepository;
     }
 
-    public Item registerItem( String name, String description, int quantity, BigDecimal price )
-    {
+    public Item registerItem(String name, String description, int quantity, double price) {
         // TODO validate input
 
-        return itemRepository.save(new Item(name,description,quantity,price));
+        return itemRepository.save(new Item(name, description, quantity, price));
     }
 
-    public Page<Item> findAllItems( Pageable pageable )
-    {
+    public Page<Item> findAllItems(Pageable pageable) {
         // TODO validate input
 
         return itemRepository.findAll(pageable);
     }
 
-    public Optional<Item> findByItemId( Long id )
-    {
+    public Optional<Item> findByItemId(Long id) {
         // TODO validate input
 
         return itemRepository.findById(id);
     }
 
-    public Optional<ItemCategories> findItemCategory( Long id )
-    {
+    public Optional<ItemCategories> findItemCategory(Long id) {
         // TODO validate input
 
         return itemCategoryRepository.findById(id);
     }
-
 
 
 }

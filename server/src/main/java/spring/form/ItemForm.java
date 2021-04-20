@@ -8,7 +8,7 @@ public class ItemForm {
     private long id;
     private String name;
     private String description;
-    private BigDecimal price;
+    private double price;
 
     public ItemForm()
     {
@@ -53,12 +53,12 @@ public class ItemForm {
         this.description = description;
     }
 
-    public BigDecimal getPrice()
+    public double getPrice()
     {
         return price;
     }
 
-    public void setPrice( BigDecimal price )
+    public void setPrice( double price )
     {
         this.price = price;
     }

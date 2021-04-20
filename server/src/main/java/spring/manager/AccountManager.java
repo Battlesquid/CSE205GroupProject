@@ -21,10 +21,10 @@ public class AccountManager implements UserDetailsService {
     }
 
 
-    public Account registerAccount( String username, String password, String firstName, String lastName, String email, String address){
+    public Account registerAccount( String username, String password, String firstName, String lastName, String email, String address, String accountType){
         // TODO validate input
 
-        return accountRepository.save(new Account(username,password,true, firstName, lastName, email, address));
+        return accountRepository.save(new Account(username,password,true, firstName, lastName, email, address, accountType));
     }
 
     @Override

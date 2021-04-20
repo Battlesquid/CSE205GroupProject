@@ -50,7 +50,8 @@ public class AccountController {
                 accountForm.getFirstName(),
                 accountForm.getLastName(),
                 accountForm.getEmail(),
-                accountForm.getAddress()
+                accountForm.getAddress(),
+                accountForm.getAccountType()
         );
 
         return "redirect:/login";
